@@ -1,0 +1,14 @@
+/Users/anejsoban/Documents/SmartHomeProject/SmartHomeConsoleApp/bin/Debug/net10.0/SmartHomeConsoleApp
+/Users/anejsoban/Documents/SmartHomeProject/SmartHomeConsoleApp/bin/Debug/net10.0/SmartHomeConsoleApp.deps.json
+/Users/anejsoban/Documents/SmartHomeProject/SmartHomeConsoleApp/bin/Debug/net10.0/SmartHomeConsoleApp.runtimeconfig.json
+/Users/anejsoban/Documents/SmartHomeProject/SmartHomeConsoleApp/bin/Debug/net10.0/SmartHomeConsoleApp.dll
+/Users/anejsoban/Documents/SmartHomeProject/SmartHomeConsoleApp/bin/Debug/net10.0/SmartHomeConsoleApp.pdb
+/Users/anejsoban/Documents/SmartHomeProject/SmartHomeConsoleApp/obj/Debug/net10.0/SmartHomeConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/anejsoban/Documents/SmartHomeProject/SmartHomeConsoleApp/obj/Debug/net10.0/SmartHomeConsoleApp.AssemblyInfoInputs.cache
+/Users/anejsoban/Documents/SmartHomeProject/SmartHomeConsoleApp/obj/Debug/net10.0/SmartHomeConsoleApp.AssemblyInfo.cs
+/Users/anejsoban/Documents/SmartHomeProject/SmartHomeConsoleApp/obj/Debug/net10.0/SmartHomeConsoleApp.csproj.CoreCompileInputs.cache
+/Users/anejsoban/Documents/SmartHomeProject/SmartHomeConsoleApp/obj/Debug/net10.0/SmartHomeConsoleApp.dll
+/Users/anejsoban/Documents/SmartHomeProject/SmartHomeConsoleApp/obj/Debug/net10.0/refint/SmartHomeConsoleApp.dll
+/Users/anejsoban/Documents/SmartHomeProject/SmartHomeConsoleApp/obj/Debug/net10.0/SmartHomeConsoleApp.pdb
+/Users/anejsoban/Documents/SmartHomeProject/SmartHomeConsoleApp/obj/Debug/net10.0/SmartHomeConsoleApp.genruntimeconfig.cache
+/Users/anejsoban/Documents/SmartHomeProject/SmartHomeConsoleApp/obj/Debug/net10.0/ref/SmartHomeConsoleApp.dll
