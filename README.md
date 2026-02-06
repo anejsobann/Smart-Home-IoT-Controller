@@ -193,13 +193,5 @@ dotnet run
 
 <hr>
 
-<h2>🛠 Technologies Used</h2>
-<ul>
-  <li>C#</li>
-  <li>.NET</li>
-  <li>ASP.NET Core Minimal API</li>
-  <li>HTTP (REST)</li>
-</ul>
-
 </body>
 </html>
