@@ -244,18 +244,8 @@ dotnet run</code></pre>
     </ul>
   </section>
 
-  <section>
-    <h2>🛠 Technologies Used</h2>
-    <ul>
-      <li>C#</li>
-      <li>.NET</li>
-      <li>ASP.NET Core Minimal API</li>
-      <li>HTTP (REST)</li>
-    </ul>
-  </section>
-
   <footer>
-    <p>✨ Tip: Keep the backend running while using the console client. Use <strong>Ctrl + C</strong> to stop the backend when finished.</p>
+    <p>✨ Tip: Keep the backend running while using the console client. Use <strong>Ctrl + C</strong>if using Mac to stop the backend when finished.</p>
   </footer>
 
 </body>
