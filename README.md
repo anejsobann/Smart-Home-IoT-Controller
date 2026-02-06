@@ -1,11 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>SmartHome Light Control (IoT)</title>
-</head>
-<body>
-
 <h1>💡 SmartHome Light Control (IoT)</h1>
 
 <h2>📘 Application Description</h2>
