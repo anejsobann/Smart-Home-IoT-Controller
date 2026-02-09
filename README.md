@@ -44,7 +44,7 @@ When the application starts, the terminal will show an address similar to:
 </p>
 
 <pre>
-http://localhost:5213
+http://localhost:9999
 </pre>
 
 <p>
