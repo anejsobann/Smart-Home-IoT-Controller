@@ -222,8 +222,3 @@ The frontend communicates with the backend API using JavaScript <code>fetch</cod
   <li>The user controls the device remotely via console or browser.</li>
 </ol>
 
-<hr>
-
-
-
-<hr>
