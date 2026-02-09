@@ -224,12 +224,6 @@ The frontend communicates with the backend API using JavaScript <code>fetch</cod
 
 <hr>
 
-<h2>✅ Result</h2>
-<ul>
-  <li>Remote control of a smart home device</li>
-  <li>Console-based and browser-based user interface</li>
-  <li>Clear demonstration of IoT communication</li>
-  <li>Simple and extensible client–server architecture</li>
-</ul>
+
 
 <hr>
