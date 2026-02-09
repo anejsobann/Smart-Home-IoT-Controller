@@ -9,14 +9,15 @@ The application demonstrates how a smart home device (a light) can be controlled
 using a network connection 🌐.
 </p>
 
-<p>The project consists of two parts:</p>
+<p>The project consists of three parts:</p>
 <ul>
-  <li>🧠 <strong>Backend API</strong> – simulates a smart light device.</li>
+  <li>🧠 <strong>Backend API</strong> – simulates a smart light device and exposes REST endpoints.</li>
   <li>💻 <strong>Console Client</strong> – allows the user to control the light from the terminal.</li>
+  <li>🌐 <strong>Web Frontend (HTML + CSS)</strong> – provides a simple browser-based user interface.</li>
 </ul>
 
 <p>
-The client communicates with the device using <strong>HTTP (REST)</strong>,
+All components communicate using <strong>HTTP (REST)</strong>,
 which is a common approach in IoT systems 🔌.
 </p>
 
@@ -26,6 +27,7 @@ which is a common approach in IoT systems 🔌.
 <ul>
   <li>.NET SDK (version 7 or higher)</li>
   <li>Terminal / Command Line</li>
+  <li>Modern web browser (for HTML frontend)</li>
   <li>Windows, macOS, or Linux</li>
 </ul>
 
@@ -36,8 +38,14 @@ which is a common approach in IoT systems 🔌.
 <pre>
 SmartHomeProject
 │
-├── SmartHomeDeviceApi      // Backend (smart device simulation)
-└── SmartHomeConsoleApp     // Console client (user interface)
+├── SmartHomeDeviceApi
+│   ├── Program.cs
+│   └── wwwroot
+│       ├── index.html     // Web frontend (HTML)
+│       └── style.css      // Web frontend styling
+│
+└── SmartHomeConsoleApp
+    └── Program.cs         // Console client
 </pre>
 
 <hr>
@@ -68,6 +76,11 @@ dotnet sln SmartHomeProject.sln add SmartHomeDeviceApi/SmartHomeDeviceApi.csproj
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
+// Enable serving static HTML and CSS
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
+// Smart light state (simulation)
 bool lightOn = false;
 
 app.MapGet("/api/light/state", () => Results.Ok(new { on = lightOn }));
@@ -99,6 +112,11 @@ dotnet run
 The terminal will display the server address, for example:
 <code>http://localhost:5213</code>.
 Keep the backend running.
+</p>
+
+<p>
+The web frontend will be available at:
+<code>http://localhost:5213/</code>
 </p>
 
 <h3>Step 5: Create the Console Client</h3>
@@ -174,12 +192,34 @@ dotnet run
 
 <hr>
 
+<h2>🌐 Web Frontend (HTML + CSS)</h2>
+
+<p>
+The project includes a simple web-based frontend implemented using HTML, CSS, and JavaScript.
+The frontend is served directly by the ASP.NET Core backend from the <code>wwwroot</code> folder.
+</p>
+
+<p>
+The web interface allows the user to:
+</p>
+<ul>
+  <li>Turn the smart light ON and OFF using buttons</li>
+  <li>View the current light status in real time</li>
+  <li>Control the device from a browser or smartphone</li>
+</ul>
+
+<p>
+The frontend communicates with the backend API using JavaScript <code>fetch</code> requests.
+</p>
+
+<hr>
+
 <h2>🔍 How the Application Works</h2>
 <ol>
-  <li>The backend API simulates a smart light.</li>
-  <li>The console client sends HTTP requests.</li>
+  <li>The backend API simulates a smart light device.</li>
+  <li>The console client and web frontend send HTTP requests.</li>
   <li>The backend updates and returns the light state.</li>
-  <li>The user controls the device remotely.</li>
+  <li>The user controls the device remotely via console or browser.</li>
 </ol>
 
 <hr>
@@ -187,11 +227,9 @@ dotnet run
 <h2>✅ Result</h2>
 <ul>
   <li>Remote control of a smart home device</li>
+  <li>Console-based and browser-based user interface</li>
   <li>Clear demonstration of IoT communication</li>
-  <li>Simple client–server architecture</li>
+  <li>Simple and extensible client–server architecture</li>
 </ul>
 
 <hr>
-
-</body>
-</html>
