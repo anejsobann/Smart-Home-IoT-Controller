@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SmartHome Light Control</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>💡 SmartHome Light Control</h1>
+
+    <p class="status">
+      Status: <span id="state">Loading...</span>
+    </p>
+
+    <div class="buttons">
+      <button id="onBtn">ON 💡</button>
+      <button id="offBtn">OFF 🌑</button>
+    </div>
+
+    <button id="refreshBtn" class="refresh">Refresh 🔄</button>
+  </div>
+
+  <script>
+    async function refreshState() {
+      const res = await fetch('/api/light/state');
+      const data = await res.json();
+      document.getElementById('state').textContent = data.on ? 'ON 💡' : 'OFF 🌑';
+    }
+
+    document.getElementById('onBtn').addEventListener('click', async () => {
+      await fetch('/api/light/on', { method: 'POST' });
+      refreshState();
+    });
+
+    document.getElementById('offBtn').addEventListener('click', async () => {
+      await fetch('/api/light/off', { method: 'POST' });
+      refreshState();
+    });
+
+    document.getElementById('refreshBtn').addEventListener('click', refreshState);
+
+    // ob zagonu
+    refreshState();
+  </script>
+
+</body>
+</html>

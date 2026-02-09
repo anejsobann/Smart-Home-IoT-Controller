@@ -8,19 +8,19 @@
     "net10.0": []
   },
   "packageFolders": {
-    "/Users/anejsoban/.nuget/packages/": {}
+    "C:\\Users\\anejs\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/anejsoban/Documents/SmartHomeProject/SmartHomeDeviceApi/SmartHomeDeviceApi.csproj",
+      "projectUniqueName": "C:\\Users\\anejs\\Downloads\\SmartHomeProject\\SmartHomeDeviceApi\\SmartHomeDeviceApi.csproj",
       "projectName": "SmartHomeDeviceApi",
-      "projectPath": "/Users/anejsoban/Documents/SmartHomeProject/SmartHomeDeviceApi/SmartHomeDeviceApi.csproj",
-      "packagesPath": "/Users/anejsoban/.nuget/packages/",
-      "outputPath": "/Users/anejsoban/Documents/SmartHomeProject/SmartHomeDeviceApi/obj/",
+      "projectPath": "C:\\Users\\anejs\\Downloads\\SmartHomeProject\\SmartHomeDeviceApi\\SmartHomeDeviceApi.csproj",
+      "packagesPath": "C:\\Users\\anejs\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\anejs\\Downloads\\SmartHomeProject\\SmartHomeDeviceApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/anejsoban/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\anejs\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net10.0"
@@ -68,7 +68,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.102/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

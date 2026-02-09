@@ -1,20 +1,19 @@
 var builder = WebApplication.CreateBuilder(args);
 var app = builder.Build();
 
-// Stanje "pametne luči" (simulacija naprave)
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
 bool lightOn = false;
 
-// Vrni stanje
 app.MapGet("/api/light/state", () => Results.Ok(new { on = lightOn }));
 
-// Prižgi
 app.MapPost("/api/light/on", () =>
 {
     lightOn = true;
     return Results.Ok(new { on = lightOn });
 });
 
-// Ugasni
 app.MapPost("/api/light/off", () =>
 {
     lightOn = false;
