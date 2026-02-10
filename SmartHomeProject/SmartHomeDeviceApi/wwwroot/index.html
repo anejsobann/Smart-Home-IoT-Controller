@@ -2,47 +2,74 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SmartHome Light Control</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="light-off">
 
   <div class="container">
-    <h1>💡 SmartHome Light Control</h1>
+    <h1>SmartHome<br><span class="sub">Light Control</span></h1>
 
     <p class="status">
       Status: <span id="state">Loading...</span>
     </p>
 
-    <div class="buttons">
-      <button id="onBtn">ON 💡</button>
-      <button id="offBtn">OFF 🌑</button>
+    <div class="toggle-wrap">
+      <label class="switch" aria-label="Toggle light ON/OFF">
+        <input type="checkbox" id="toggleLight">
+        <span class="slider">
+          <span class="label-off">OFF</span>
+          <span class="label-on">ON</span>
+        </span>
+      </label>
     </div>
-
-    <button id="refreshBtn" class="refresh">Refresh 🔄</button>
   </div>
 
   <script>
-    async function refreshState() {
-      const res = await fetch('/api/light/state');
-      const data = await res.json();
-      document.getElementById('state').textContent = data.on ? 'ON 💡' : 'OFF 🌑';
+    const toggle = document.getElementById('toggleLight');
+    const stateEl = document.getElementById('state');
+
+    function setBackground(isOn) {
+      document.body.classList.remove('light-on', 'light-off');
+      document.body.classList.add(isOn ? 'light-on' : 'light-off');
     }
 
-    document.getElementById('onBtn').addEventListener('click', async () => {
-      await fetch('/api/light/on', { method: 'POST' });
-      refreshState();
+    async function refreshState() {
+      const res = await fetch('/api/light/state');
+      if (!res.ok) throw new Error('Failed to fetch state');
+      const data = await res.json();
+
+      const isOn = !!data.on;
+      stateEl.textContent = isOn ? 'ON 💡' : 'OFF 🌑';
+      toggle.checked = isOn;
+      setBackground(isOn);
+    }
+
+    toggle.addEventListener('change', async () => {
+      const isOn = toggle.checked;
+
+      try {
+        const resp = await fetch(isOn ? '/api/light/on' : '/api/light/off', { method: 'POST' });
+        if (!resp.ok) throw new Error('Failed to update light state');
+        await refreshState();
+      } catch (e) {
+        alert('Cannot connect to backend API. Make sure the server is running.');
+        try { await refreshState(); } catch {}
+      }
     });
 
-    document.getElementById('offBtn').addEventListener('click', async () => {
-      await fetch('/api/light/off', { method: 'POST' });
-      refreshState();
+    refreshState().catch(() => {
+      stateEl.textContent = 'API not reachable ❌';
+      setBackground(false);
     });
 
-    document.getElementById('refreshBtn').addEventListener('click', refreshState);
-
-    // ob zagonu
-    refreshState();
+    setInterval(() => refreshState().catch(() => {}), 3000);
   </script>
 
 </body>

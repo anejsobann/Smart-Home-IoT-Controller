@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\anejs\\Downloads\\SmartHomeProject\\SmartHomeDeviceApi\\SmartHomeDeviceApi.csproj": {}
+    "C:\\Users\\b24\\Downloads\\SmartHomeProject\\SmartHomeDeviceApi\\SmartHomeDeviceApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\anejs\\Downloads\\SmartHomeProject\\SmartHomeDeviceApi\\SmartHomeDeviceApi.csproj": {
+    "C:\\Users\\b24\\Downloads\\SmartHomeProject\\SmartHomeDeviceApi\\SmartHomeDeviceApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anejs\\Downloads\\SmartHomeProject\\SmartHomeDeviceApi\\SmartHomeDeviceApi.csproj",
+        "projectUniqueName": "C:\\Users\\b24\\Downloads\\SmartHomeProject\\SmartHomeDeviceApi\\SmartHomeDeviceApi.csproj",
         "projectName": "SmartHomeDeviceApi",
-        "projectPath": "C:\\Users\\anejs\\Downloads\\SmartHomeProject\\SmartHomeDeviceApi\\SmartHomeDeviceApi.csproj",
-        "packagesPath": "C:\\Users\\anejs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anejs\\Downloads\\SmartHomeProject\\SmartHomeDeviceApi\\obj\\",
+        "projectPath": "C:\\Users\\b24\\Downloads\\SmartHomeProject\\SmartHomeDeviceApi\\SmartHomeDeviceApi.csproj",
+        "packagesPath": "C:\\Users\\b24\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\b24\\Downloads\\SmartHomeProject\\SmartHomeDeviceApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\anejs\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\b24\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
