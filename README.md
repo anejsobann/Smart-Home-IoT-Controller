@@ -113,11 +113,6 @@ dotnet run
 </pre>
 
 <p>
-The terminal will display the server address, for example:
-<code>http://localhost:5213</code>.
-</p>
-
-<p>
 Open the application in a browser:
 </p>
 
