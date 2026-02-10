@@ -114,7 +114,7 @@ dotnet run
 
 <p>
 The terminal will display the server address, for example:
-<code>http://localhost:5213</code>.
+<code>http://localhost:9999</code>.
 </p>
 
 <p>
