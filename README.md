@@ -17,7 +17,7 @@ using a network connection 🌐.
 
 <p>
 The frontend communicates with the backend using <strong>HTTP (REST)</strong>,
-which is a common approach in IoT systems 🔌.
+which is a common approach in IoT systems.
 </p>
 
 <hr>
